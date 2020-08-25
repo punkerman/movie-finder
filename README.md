@@ -1,6 +1,6 @@
 # MoviesFinder
 
-Application for search movies, watch details of movies and save favourites
+Application for search movies, watch details of movies and save and watch favourites
 
 ## Development server
 
