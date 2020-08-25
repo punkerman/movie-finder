@@ -1,0 +1,73 @@
+@import '../../../shared/_colors'
+@import '../../../shared/_mixings'
+@import '../../../shared/_variables'
+
+.movie-detail
+    margin: 2% 5%
+    padding: 3% 5%
+    display: flex
+    flex-direction: row
+    background: $white
+    .detail-poster
+        width: 25%
+        background: $shadow
+    .detail-content
+        width: 75%
+        margin-left: 5%
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+    .content-header
+        .content-title
+            font-size: $fontSizeXLarge
+            font-weight: 500
+        .content-subtitle
+            display: inline-flex
+    .content-plot
+        margin: 15px 0
+    .scores
+        width: 100%
+@media only screen and (max-width: $breakpointSmall) 
+    .movie-detail
+        margin: 2% 3%
+        padding: 3% 2%
+        .detail-poster
+            width: 30%
+            padding: 20% 5px
+            background: $white
+        .detail-content
+            width: 70%
+            margin-left: 3%
+        .content-header
+            .content-title
+                font-size: $fontSizeLarge
+            .content-subtitle
+                font-size: $fontSizeSmall
+        .content-plot
+            font-size: $fontSizeMedium
+        .content-cast
+            font-size: $fontSizeMedium
+        .scores
+            width: 100%
+@media only screen and (min-width: $breakpointSmall+1) and (max-width: $breakpointMedium) 
+    .movie-detail
+        margin: 2% 3%
+        padding: 3% 2%
+        .detail-poster
+            width: 30%
+            padding: 10% 5px
+            background: $white
+        .detail-content
+            width: 70%
+            margin-left: 3%
+        .content-header
+            .content-title
+                font-size: $fontSizeLarge + 11
+            .content-subtitle
+                font-size: $fontSizeSmall + 2
+        .content-plot
+            font-size: $fontSizeMedium + 4
+        .content-cast
+            font-size: $fontSizeMedium + 4
+        .scores
+            width: 100%

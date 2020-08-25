@@ -1,0 +1,19 @@
+@import '_colors'
+@import 'fonts'
+@import '_variables'
+
+@mixin button
+        font-family: 'ArchitectsDaughter'
+        padding: 9px 10px
+        font-size: $fontSizeMedium
+        height: fit-content
+        margin: 0 10px
+        background: $secondary
+        border-color: $secondary
+        color: $tertiary
+        &:hover
+            cursor: pointer
+        &:active
+            opacity: 0.7
+
+

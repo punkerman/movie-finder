@@ -1,0 +1,32 @@
+// @import '_colors'
+// @import '_mixings'
+@import '../../../shared/_colors'
+@import '../../../shared/_mixings'
+@import '../../../shared/_variables'
+.search-block
+    display: flex
+    flex-direction: row
+    justify-content: center
+    height: auto
+    align-items: baseline
+
+    .input-block
+        display: flex
+        flex-direction: column
+        width: 80%
+        input
+            // width: 80%
+            padding: 10px 15px
+            margin: 8px 0 0 0
+            box-sizing: border-box
+        .invalid
+            font-size: 10px
+
+    button
+        @include button
+
+@media only screen and (max-width: $breakpointSmall) 
+    .search-block
+        button 
+            font-size: 11px
+  

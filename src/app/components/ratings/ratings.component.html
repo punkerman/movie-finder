@@ -1,0 +1,27 @@
+
+<div class="ratings-container">
+  <div class="rating" *ngIf="ratings?.rated.value !== 'N/A'">
+    <div class="score">
+      {{ ratings?.rated.value }}
+    </div>
+    <div class="score-label">
+      {{ ratings?.rated.label }}
+    </div>
+  </div>
+  <div class="score-container"  *ngIf="ratings?.imdbRating.value !== 'N/A'" [ngStyle]="{ background: imbdColor }">
+    <div class="score">
+      {{ ratings?.imdbRating.value }}
+    </div>
+    <div class="score-label">
+      {{ ratings?.imdbRating.label }}
+    </div>
+  </div>
+  <div class="score-container"  *ngIf="ratings?.metascore.value !== 'N/A'" [ngStyle]="{ background: metacriticColor }">
+    <div class="score">
+      {{ ratings?.metascore.value }}
+    </div>
+    <div class="score-label">
+      {{ ratings?.metascore.label }}
+    </div>
+  </div>
+</div>

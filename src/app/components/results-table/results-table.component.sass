@@ -1,0 +1,33 @@
+@import '../../../shared/_variables'
+
+.movie-table
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: 20px
+    margin: 0 1%
+
+.pagination
+    display: flex
+    flex-direction: row
+    margin-top: $sizeBase
+    justify-content: center
+
+.no-found
+    display: flex
+    justify-content: center
+    margin-top: $sizeBase
+    text-align: center
+    font-size: $fontSizeXLarge
+
+@media only screen and (max-width: $breakpointSmall)
+    .movie-table
+        gap: 10px
+@media only screen and (max-width: $breakpointMedium)
+    .movie-table
+        gap: $sizeBase/2 $sizeBase
+    .no-found
+        font-size: $fontSizeLarge
+@media only screen and (max-width: $breakpointLarge)
+    .movie-table
+        gap: 18px

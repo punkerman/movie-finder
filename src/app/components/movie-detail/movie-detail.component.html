@@ -1,0 +1,32 @@
+<div class="movie-detail">
+<div *ngIf="movie.Poster !== 'N/A' then imageBlock else noImageBlock"></div>
+<ng-template #imageBlock>
+  <img [src]="movie.Poster" alt="movie.Title" class="detail-poster" />
+</ng-template>
+<ng-template #noImageBlock>
+  <div class="detail-poster"></div>
+</ng-template>
+  
+  
+    <div class="detail-content">
+      <div class="content-header">
+        <div class="content-title">{{ movie.Title }}</div>
+        <div class="content-subtitle">
+          <div>
+            {{ movie.Released }} | {{ movie.Genre }} | {{ movie.Runtime }}
+          </div>
+        </div>
+      </div>
+      <div class="content-plot">{{ movie.Plot }}</div>
+  
+      <div class="content-cast">
+        <div><strong>Stars:</strong> {{ movie.Actors }}</div>
+        <div><strong>Director:</strong> {{ movie.Director }}</div>
+        <div><strong>Writer:</strong> {{ movie.Writer }}</div>
+      </div>
+  
+      <div class="scores">
+        <app-ratings [ratings]="ratings" ></app-ratings>
+      </div>
+    </div>
+  </div>

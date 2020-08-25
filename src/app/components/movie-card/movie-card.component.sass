@@ -1,0 +1,54 @@
+// @import '_mixings'
+@import '../../../shared/_mixings'
+@import '../../../shared/_colors'
+@import '../../../shared/_variables'
+
+.card
+    font-size: 1em
+    overflow: hidden
+    padding: 0
+    border: none
+    border-radius: 5px
+    box-shadow: 0 1px 3px 0 $shadow, 0 0 0 1px $shadow
+    width: 216px
+
+    .card-image
+        background: $shadow
+        background-position: center
+        background-repeat: no-repeat
+        background-size: auto
+        height: 320px
+
+    .card-block
+        position: relative
+        margin: 0
+        padding: 8px 0 8px 8px
+        border: none
+        border-top: 1px solid $border
+        box-shadow: none
+
+        .card-title
+            font-size: $fontSizeLarge
+            font-weight: 500
+            text-overflow: ellipsis
+            display: -webkit-box
+            -webkit-line-clamp: 1
+            overflow: hidden
+            -webkit-box-orient: vertical
+        .card-text
+            font-size: $fontSizeMedium
+
+    .card-footer
+        display: flex
+        align-items: baseline
+        justify-content: space-between
+        position: static
+        top: 0
+        left: 0
+        max-width: 100%
+        padding:  $sizeBase / 2
+        border-top: 1px solid rgba(0, 0, 0, .05)
+        background: #fff
+
+        button
+            @include button

@@ -1,0 +1,12 @@
+<div class="card">
+  <div  [ngStyle]="{ 'background-image': 'url(' + movie.Poster + ')'}" class="card-image"></div>
+  <div class="card-block">
+    <div class="card-title">{{ movie.Title }}</div>
+    <div class="card-text">Type: {{ movie.Type }}</div>
+    <div class="card-text">Release year: {{ movie.Year }}</div>
+  </div>
+  <div class="card-footer">
+    <button [routerLink]="['/movie', movie.imdbID]" (click)="setSelectedMovie()">Info <fa-icon [icon]="faPaperPlane"></fa-icon></button>
+    <app-favourite [id]="movie.imdbID"></app-favourite>
+  </div>
+</div>

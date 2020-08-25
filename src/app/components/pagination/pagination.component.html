@@ -1,0 +1,6 @@
+<div class="pagination-block">
+    <button (click)="setFirstPage()" *ngIf="currPage > 2"><div class="pagination-page">1</div> first </button>
+    <button (click)="setPreviousPage()" *ngIf="currPage > 1"> <div class="pagination-page">{{currPage - 1}}</div> previous </button>
+    <button (click)="setNextPage()" *ngIf="currPage !== totalPages" >next <div class="pagination-page">{{currPage + 1}} </div> </button>
+    <button (click)="setLastPage()" *ngIf="totalPages > 1">last <div class="pagination-page">{{totalPages}}</div></button>
+</div>

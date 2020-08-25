@@ -1,0 +1,16 @@
+<div *ngIf="!noMoviesFound; then moviesBlock else noMoviesBlock"></div>
+
+<ng-template #moviesBlock>
+  <div class="movie-table"><app-movie-card [movie]="movie" *ngFor="let movie of movies"></app-movie-card>
+    
+  </div>
+  <div class="pagination">
+    <app-pagination [currPage]="currPage" [totalPages]="totalPages" ></app-pagination>
+  </div>
+</ng-template>
+<ng-template #noMoviesBlock >
+  <div class="no-found">
+    no movies found :( !!!!
+  </div>
+</ng-template>
+

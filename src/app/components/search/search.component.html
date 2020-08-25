@@ -1,0 +1,14 @@
+<div class="search-block">
+  <div class="input-block">
+    <input
+      type="text"
+      placeholder="search movie"
+      [(ngModel)]="search$"
+      (ngModelChange)="onChangeEvent($event)"
+    />
+    <span *ngIf="this.search$.length > 0 && this.search$.length < 3" class="invalid">write at least 3 charaters to start searching</span>
+  </div>
+  <button (click)="clearInput()">
+    reset <fa-icon [icon]="faTimes"></fa-icon>
+  </button>
+</div>

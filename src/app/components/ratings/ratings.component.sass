@@ -1,0 +1,62 @@
+// @import '_colors'
+@import '../../../shared/_colors'
+@import '../../../shared/_variables'
+.ratings-container
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    flex-wrap: wrap
+    gap: 15px
+    .rating
+        padding: 6px $sizeBase/2
+        color: $black
+        background: $white
+        border: 2px solid $black
+        width: 15%
+        text-align: center
+        .score
+            font-size: $fontSizeLarge + 3
+        .score-label
+            font-size: $fontSizeMedium - 2    
+    .score-container
+        padding: $sizeBase / 2
+        width: 10%
+        text-align: center
+        .score
+            font-size: $fontSizeLarge + 3
+        .score-label
+            font-size: $fontSizeMedium - 2
+
+@media only screen and (max-width: $breakpointSmall) 
+    .ratings-container
+        .rating
+            padding: 3px 6px
+            .score
+                font-size: $fontSizeMedium + 4
+            .score-label
+                font-size: $fontSizeSmall - 3
+        .score-container
+            padding: 8px
+            .score
+                font-size: $fontSizeMedium + 4
+            .score-label
+                font-size: $fontSizeSmall - 3   
+@media only screen and (min-width: $breakpointSmall+1) and (max-width: $breakpointMedium) 
+    .ratings-container
+        .rating
+            padding: 3px 6px
+            .score
+                font-size: $fontSizeLarge
+            .score-label
+                font-size: $fontSizeSmall
+        .score-container
+            padding: 8px
+            width: 15%
+
+            .score
+                font-size: $fontSizeLarge
+            .score-label
+                font-size: $fontSizeSmall  
+
+    
+        

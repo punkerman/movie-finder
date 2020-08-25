@@ -1,0 +1,19 @@
+
+@import '../../../shared/_colors'
+@import '../../../shared/_mixings'
+@import '../../../shared/_variables'
+
+.pagination-block
+    display: flex
+    flex-direction: row
+    margin-top: $sizeBase
+    justify-content: center
+    height: auto
+    align-items: baseline
+    button
+        display: inline-flex
+        @include button
+        .pagination-page
+            background: $primary
+            margin: 0 5px
+            padding: 0 3px

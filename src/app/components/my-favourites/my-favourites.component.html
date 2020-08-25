@@ -1,0 +1,11 @@
+<div class="title">My Favourites</div>
+<app-navigation-back></app-navigation-back>
+<div *ngIf="favourites.length > 0; then favouritesBlock else nofavourites"></div>
+<ng-template #favouritesBlock>
+    <app-movie-detail [id]="favourite" *ngFor="let favourite of favourites" ></app-movie-detail>
+</ng-template>
+<ng-template #nofavourites >
+    <div class="no-found">
+      no favourite movies selected :(
+    </div>
+  </ng-template>
